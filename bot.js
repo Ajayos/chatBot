@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         messageElement.querySelector(".typing-indicator").remove();
         messageElement.innerHTML += `<p>${message}</p>`;
-      }, 1000); // Simulate typing delay (adjust as needed)
+      }, 1000);
     } else if (sender === "user") {
       messageElement.innerHTML = `
               <p>${message}</p>
