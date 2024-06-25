@@ -170,10 +170,26 @@ document.addEventListener("DOMContentLoaded", function () {
           border-radius: 10px;
           max-width: 70%;
       }
+      .message.bot p {
+          margin-left: -6px;
+      }
 
       .message.user p {
           background-color: #007bff;
           color: #fff;
+      }
+
+      .typing-indicator {
+          margin-left: 10px;
+          font-style: italic;
+          color: #aaa;
+          animation: typing 1s infinite;
+      }
+
+      @keyframes typing {
+          0% { opacity: 0.5; }
+          50% { opacity: 1; }
+          100% { opacity: 0.5; }
       }
 
       .overlay {
@@ -194,7 +210,10 @@ document.addEventListener("DOMContentLoaded", function () {
   let messages = [
     { message: "Hello! How can I assist you today?", sender: "bot" },
     { message: "Hi! I need some help with my account.", sender: "user" },
-    { message: "Sure, I'd be happy to help. What do you need assistance with?", sender: "bot"}
+    {
+      message: "Sure, I'd be happy to help. What do you need assistance with?",
+      sender: "bot",
+    },
   ];
 
   // Function to add a message to the chatbot window
@@ -213,7 +232,11 @@ document.addEventListener("DOMContentLoaded", function () {
         <circle cx="42" cy="22" r="4" fill="#007bff"/>
         <rect x="24" y="32" width="16" height="4" fill="#007bff"/>
       </svg>
-      <p>${message}</p>`;
+      <p><span class="typing-indicator">Typing...</span></p>`;
+      setTimeout(function () {
+        messageElement.querySelector(".typing-indicator").remove();
+        messageElement.innerHTML += `<p>${message}</p>`;
+      }, 1000); // Simulate typing delay (adjust as needed)
     } else if (sender === "user") {
       messageElement.innerHTML = `
               <p>${message}</p>
