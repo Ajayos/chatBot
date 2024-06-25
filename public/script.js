@@ -25,12 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const style = document.createElement("style");
   style.textContent = `
       body {
-          margin: 0;
-          padding: 0;
-          height: 100vh;
-          display: flex;
-          justify-content: flex-end;
-          align-items: flex-end;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: relative;
       }
 
       .chatbot-button {
@@ -43,11 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
           align-items: center;
           margin: 20px;
           cursor: pointer;
-          position: fixed;
+          position: absolute;
           right: 20px;
           bottom: 20px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
           transition: background-color 0.3s;
+          z-index: 999;
           border: 2px solid blue;
       }
 
@@ -66,13 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
           background-color: #ffffff;
           border: 1px solid #ccc;
           border-radius: 10px;
-          position: fixed;
+          position: absolute;
           right: 20px;
           bottom: 80px;
           display: flex;
           flex-direction: column;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          z-index: 1000; /* Ensure it appears above other content */
+          z-index: 1000;
       }
 
       .chatbot-header {
@@ -96,13 +98,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       .chatbot-header .close-button:hover {
-          color: #f44336; /* Red color for close button on hover */
+          color: #f44336;
       }
 
       .chatbot-messages {
           flex: 1;
           padding: 10px;
           overflow-y: auto;
+          position: relative;
+          z-index: 1001;
       }
 
       .chatbot-input {
@@ -172,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
           color: #fff;
       }
 
-      /* Overlay styles for the backdrop */
       .overlay {
           position: fixed;
           top: 0;
@@ -183,6 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
           z-index: 999; /* Ensure it's above the chatbot window */
           display: none;
       }
+
   `;
   document.head.appendChild(style);
 
