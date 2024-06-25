@@ -25,7 +25,6 @@ This setup ensures that the chatbot's script is loaded when the page is loaded, 
 Here is a complete example of how to integrate the chatbot into an HTML page:
 
 ```html
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
