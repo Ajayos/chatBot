@@ -1,17 +1,24 @@
 # ChatBot Demo Project
 
-This project demonstrates the integration of a chatbot into a webpage using HTML. It's designed to showcase how easily a chatbot can be added to any website, providing an interactive chat popup feature for users.
+This project demonstrates how to integrate a chatbot into a webpage using HTML, showcasing the ease with which a chatbot can be added to any website to provide an interactive chat popup feature for users.
 
 ## Getting Started
 
-To integrate the chatbot into your webpage, simply include the following HTML snippet in your page:
+Integrating the chatbot into your webpage involves a simple two-step process:
 
-```html
-<div class="chatbot-by-ajay-os"></div>
-<script src="https://ajayos.github.io/chatBot/bot.js"></script>
-```
+1. **Include the JavaScript:** Add the following script tag within the `<head>` section of your HTML page:
 
-This snippet creates a placeholder for the chatbot and includes the necessary JavaScript to activate the chat popup feature.
+    ```html
+    <script src="https://ajayos.github.io/chatBot/bot.js"></script>
+    ```
+
+2. **Add the Chatbot Placeholder:** Place the following `<div>` tag within the `<body>` section of your HTML page where you want the chat popup to appear:
+
+    ```html
+    <div class="chatbot-by-ajay-os"></div>
+    ```
+
+This setup ensures that the chatbot's script is loaded when the page is loaded, and the chatbot itself is displayed where you've placed the `<div>` tag.
 
 ## Features
 
