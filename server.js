@@ -7,8 +7,19 @@ const __dirname = dirname(__filename);
 
 const app = express();
 const port = 3001;
+// Add middleware for parsing JSON data
+app.use(express.json());
+
+// Add middleware for parsing URL-encoded data
+app.use(express.urlencoded({ extended: true }));
+
+// Add middleware for serving static files from the 'public' folder
+app.use(expressStatic(join(__dirname, 'public')));
 
 // Route for serving the index.html file
+app.get('/test', (req, res) => {
+    res.sendFile(join(__dirname, 'public', 'test.html'));
+});
 app.get('/', (req, res) => {
     res.sendFile(join(__dirname, 'public', 'index.html'));
 });
