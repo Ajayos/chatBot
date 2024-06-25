@@ -20,6 +20,25 @@ Integrating the chatbot into your webpage involves a simple two-step process:
 
 This setup ensures that the chatbot's script is loaded when the page is loaded, and the chatbot itself is displayed where you've placed the `<div>` tag.
 
+---
+
+Here is a complete example of how to integrate the chatbot into an HTML page:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Button</title>
+</head>
+<body>
+    <div class="chatbot-by-ajay-os"></div>
+    <script src="https://ajayos.github.io/chatBot/bot.js"></script>
+</body>
+</html>
+```
+
 ## Features
 
 - **Easy Integration:** With just a couple of lines of HTML, you can add a fully functional chatbot to your site.
