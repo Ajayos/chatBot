@@ -7,6 +7,16 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
+  // Check if the URL matches the specified authentication URL
+  console.log(window.location.href);
+  if (
+    !window.location.href.startsWith("http://192.9.200.64") &&
+    !window.location.href.startsWith("https://192.9.200.64")
+  ) {
+    console.error("URL does not match the specified authentication URL.");
+    return;
+  }
+
   // Create and style the button
   const chatbotButton = document.createElement("div");
   chatbotButton.classList.add("chatbot-button");
