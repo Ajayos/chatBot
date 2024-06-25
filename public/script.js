@@ -190,6 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let messages = [
     { message: "Hello! How can I assist you today?", sender: "bot" },
     { message: "Hi! I need some help with my account.", sender: "user" },
+    { message: "Sure, I'd be happy to help. What do you need assistance with?", sender: "bot"}
   ];
 
   // Function to add a message to the chatbot window
