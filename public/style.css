@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.chatbot-button {
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    border: 2px solid blue; /* Add this line to set the border color */
+}
+
+.chatbot-button:hover {
+    background-color: #0056b3;
+}
+
+.chatbot-icon {
+    width: 30px;
+    height: 30px;
+}

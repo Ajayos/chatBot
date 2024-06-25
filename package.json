@@ -1,0 +1,16 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "library for chat bot js",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ajay o s",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

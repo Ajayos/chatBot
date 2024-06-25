@@ -1,0 +1,22 @@
+import express, { static as expressStatic } from "express";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const app = express();
+const port = 3001;
+
+// Route for serving the index.html file
+app.get('/', (req, res) => {
+    res.sendFile(join(__dirname, 'public', 'index.html'));
+});
+
+// Serve static files from the 'public' folder
+app.use(express.static(join(__dirname, 'public')));
+
+// Start the server
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
